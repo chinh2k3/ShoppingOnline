@@ -6,7 +6,6 @@ import com.example.ClothesShoppingOnline.Service.OrderService;
 import com.example.ClothesShoppingOnline.domain.dto.OrdersDTO;
 import com.example.ClothesShoppingOnline.domain.dto.PaymentDTO;
 import com.example.ClothesShoppingOnline.domain.entities.Orders;
-import com.example.ClothesShoppingOnline.domain.entities.Payment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>dataJPA</artifactId>
+	<artifactId>ClothShoppingOnline</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dataJPA</name>
 	<description>Demo project for Spring Boot</description>
@@ -60,10 +60,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-messaging</artifactId>
+			<version>5.3.10</version> <!-- Thay phiên bản phù hợp với dự án của bạn -->
 		</dependency>
+
 	</dependencies>
 
 	<build>

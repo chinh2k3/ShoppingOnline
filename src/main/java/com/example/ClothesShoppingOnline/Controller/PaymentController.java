@@ -3,20 +3,22 @@ package com.example.ClothesShoppingOnline.Controller;
 import com.example.ClothesShoppingOnline.Mapper.Mapper;
 import com.example.ClothesShoppingOnline.Service.PaymentService;
 import com.example.ClothesShoppingOnline.domain.dto.PaymentDTO;
-import com.example.ClothesShoppingOnline.domain.dto.ProductsDTO;
-import com.example.ClothesShoppingOnline.domain.dto.UserDTO;
 import com.example.ClothesShoppingOnline.domain.entities.Payment;
-import com.example.ClothesShoppingOnline.domain.entities.Products;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+
 public class PaymentController {
     private PaymentService paymentService;
+
 
     private Mapper<Payment, PaymentDTO> paymentMapper;
 
@@ -38,6 +40,7 @@ public class PaymentController {
                 .map(paymentMapper::mapTo)
                 .collect(Collectors.toList());
     }
+
 //    @GetMapping(path="/user/{name}/{password}")
 //    public ResponseEntity<UserDTO> getUserById(@PathVariable String name, @PathVariable String password) {
 //        User user = userService.getUserByName(name,password);
@@ -66,3 +69,5 @@ public class PaymentController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
+
+

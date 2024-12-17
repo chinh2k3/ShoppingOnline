@@ -5,6 +5,7 @@ import com.example.ClothesShoppingOnline.domain.entities.Products;
 
 import java.util.List;
 
+
 public interface Order_detailService {
     Order_detail addnewOrderDetail(Order_detail order_detail);
 
